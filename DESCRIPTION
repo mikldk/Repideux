@@ -1,0 +1,26 @@
+Package: Repideux
+Type: Package
+Title: R bindings for epideux
+Version: 0.0.1
+Authors@R: c(
+    person(given = "Mikkel Meyer", family = "Andersen", 
+        email = "mikl@math.aau.dk", role = c("aut", "cre")),
+    person(given = "Karl Damkjær", family = "Hansen", 
+        role = c("cph"), comment = "Original developer of epideux")
+  )
+Maintainer: Mikkel Meyer Andersen <mikl@math.aau.dk>
+Description: Based on "epideux" <https://github.com/kdhansen/epideux>.
+License: GPL (>= 2)
+Depends:
+    R (>= 3.6.0)
+LinkingTo: Rcpp
+Imports:
+    Rcpp (>= 1.0.4.6)
+Suggests:
+    knitr,
+    rmarkdown
+SystemRequirements: C++17
+Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
+RoxygenNote: 7.1.0
+VignetteBuilder: knitr

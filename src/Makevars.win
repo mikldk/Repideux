@@ -1,0 +1,18 @@
+# echo `ls epideux/src/*.cpp`
+SOURCES.epideux = epideux/src/itinerary_entry.cpp epideux/src/location.cpp epideux/src/model.cpp epideux/src/person.cpp 
+
+SOURCES.repideux = RcppExports.cpp repideux.cpp
+
+OBJECTS.epideux = $(SOURCES.epideux:.cpp=.o)
+OBJECTS.repideux = $(SOURCES.repideux:.cpp=.o)
+
+OBJECTS=$(OBJECTS.epideux) $(OBJECTS.repideux)
+
+PKG_CPPFLAGS = -Iepideux/include -DNO_GLOBALS
+
+PKG_LIBS = `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"`
+
+all: $(SHLIB)
+
+#clean:
+#	@rm -f $(OBJECTS)

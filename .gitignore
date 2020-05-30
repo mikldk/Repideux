@@ -37,3 +37,8 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+logs/
+src/*.o
+src/*.so
+src/epideux/src/*.o
